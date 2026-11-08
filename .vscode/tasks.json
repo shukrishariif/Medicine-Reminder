@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Daryeel Android emulator",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/tool/start-android.ps1",
+        "-Avd",
+        "Daryeel_Alarm_Test",
+        "-Port",
+        "5556"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Validate Daryeel Supabase configuration",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/tool/check_supabase.py"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Prepare Daryeel authenticated Android",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Validate Daryeel Supabase configuration",
+        "Start Daryeel Android emulator"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

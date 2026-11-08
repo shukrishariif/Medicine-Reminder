@@ -1,0 +1,7 @@
+{
+  "dart.flutterRunAdditionalArgs": [
+    "--dart-define-from-file=env.json",
+    "--no-enable-impeller",
+    "--enable-software-rendering"
+  ]
+}

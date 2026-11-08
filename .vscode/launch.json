@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Daryeel - authenticated Android (env.json)",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "deviceId": "emulator-5556",
+      "flutterMode": "debug",
+      "toolArgs": [
+        "--dart-define-from-file=env.json",
+        "--no-enable-impeller",
+        "--enable-software-rendering"
+      ],
+      "preLaunchTask": "Prepare Daryeel authenticated Android"
+    },
+    {
+      "name": "Daryeel - Attach running app (no reinstall)",
+      "type": "dart",
+      "request": "attach",
+      "deviceId": "emulator-5556"
+    },
+    {
+      "name": "Daryeel - Android",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "deviceId": "emulator-5556",
+      "flutterMode": "debug",
+      "toolArgs": [
+        "--dart-define-from-file=env.json",
+        "--no-enable-impeller",
+        "--enable-software-rendering"
+      ],
+      "preLaunchTask": "Prepare Daryeel authenticated Android"
+    },
+    {
+      "name": "Daryeel - selected device",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "flutterMode": "debug",
+      "toolArgs": ["--dart-define-from-file=env.json"],
+      "preLaunchTask": "Validate Daryeel Supabase configuration"
+    }
+  ]
+}
