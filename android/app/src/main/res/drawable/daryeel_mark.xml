@@ -1,6 +1,4 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="96dp" android:height="96dp"
-    android:viewportWidth="96" android:viewportHeight="96">
-    <path android:fillColor="#EEE7FF" android:pathData="M48,0 A48,48 0,1 1,48,96 A48,48 0,1 1,48,0" />
-    <path android:fillColor="#087C70" android:pathData="M48,65 C24,63 19,42 26,35 C40,33 49,45 48,65 M49,66 C49,42 61,31 75,34 C78,49 66,65 49,66 M48,46 C29,32 34,20 43,24 C46,25 48,28 48,28 C48,28 51,23 56,24 C69,28 59,40 48,46" />
-</vector>
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/daryeel_symbol"
+    android:inset="8dp" />

@@ -1,7 +1,7 @@
 <resources>
     <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
-        <item name="android:windowSplashScreenBackground">#161421</item>
-        <item name="android:windowSplashScreenAnimatedIcon">@drawable/daryeel_mark</item>
-        <item name="android:windowBackground">#161421</item>
+        <item name="android:windowSplashScreenBackground">#FFFFFF</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="android:windowBackground">#FFFFFF</item>
     </style>
 </resources>

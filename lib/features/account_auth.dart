@@ -6,6 +6,7 @@ import '../core/strings.dart';
 import '../core/motion.dart';
 import '../core/premium.dart';
 import '../core/theme.dart';
+import '../core/brand_logo.dart';
 import '../services/app_controller.dart';
 
 const authCallback = 'io.daryeel.app://login-callback/';
@@ -217,7 +218,7 @@ class AccountWelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) => AuthFrame(
     back: false,
     children: [
-      const AuthArtwork(icon: Icons.add_rounded, medicine: true),
+      const DaryeelLogo(size: 290),
       Consumer(
         builder: (context, ref, _) {
           final notice = ref.watch(appProvider).authNotice;
@@ -235,15 +236,6 @@ class AccountWelcomeScreen extends StatelessWidget {
         },
       ),
       const SizedBox(height: 20),
-      const Text(
-        'Daryeel',
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 44,
-          fontWeight: FontWeight.w800,
-          color: purple,
-        ),
-      ),
       const SizedBox(height: 10),
       Text(
         tr(context, 'Your Personal Medicine Reminder'),
@@ -555,9 +547,7 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
         }
       },
       children: [
-        AuthArtwork(
-          icon: widget.signup ? Icons.person_add_alt_1 : Icons.lock_outline,
-        ),
+        const DaryeelLogo(size: 190),
         const SizedBox(height: 16),
         Text(
           tr(context, title),

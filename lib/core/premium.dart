@@ -2,6 +2,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'motion.dart';
 import 'theme.dart';
+import 'brand_logo.dart';
 
 const careTeal = Color(0xFF087C70);
 
@@ -319,21 +320,18 @@ class StartupScreen extends StatelessWidget {
       child: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(32),
-          child: SoftEntrance(
+          child: TweenAnimationBuilder<double>(
+            tween: Tween(
+              begin: MediaQuery.disableAnimationsOf(context) ? 1 : 0,
+              end: 1,
+            ),
+            duration: motionDuration(context, 650),
+            builder: (context, opacity, child) =>
+                Opacity(opacity: opacity, child: child),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const CareArtwork(size: 220),
-                const SizedBox(height: 24),
-                const Text(
-                  'Daryeel',
-                  style: TextStyle(
-                    fontSize: 42,
-                    fontWeight: FontWeight.w800,
-                    color: careTeal,
-                    letterSpacing: -1.5,
-                  ),
-                ),
+                const DaryeelLogo(size: 340),
                 const SizedBox(height: 36),
                 SizedBox(
                   width: 220,
